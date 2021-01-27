@@ -79,8 +79,8 @@ function PLUGIN:ChatBoxMessageAdded(info)
 				Clockwork.chatBox:Add(eavesdroppers, info.speaker, "bug", info.text);
 			end;
 			
-			table.Merge(info.listeners, listeners);
-			table.Merge(info.listeners, eavesdroppers);
+			//table.Merge(info.listeners, listeners);
+			//table.Merge(info.listeners, eavesdroppers);
 		end;
 
 		listensers = {};
@@ -126,8 +126,8 @@ function PLUGIN:ChatBoxMessageAdded(info)
 							Clockwork.chatBox:Add(eavesdroppers, info.speaker, "bug", info.text);
 						end;
 						
-						table.Merge(info.listeners, listeners);
-						table.Merge(info.listeners, eavesdroppers);
+						//table.Merge(info.listeners, listeners);
+						//table.Merge(info.listeners, eavesdroppers);
 					end;
 				end;
 			end;
