@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Industrial Storage";
+	LOOTCRATE.uniqueID = "industrial_storage";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 4;
+	LOOTCRATE.model = "models/props/metallockers004.mdl";
+	LOOTCRATE.description = "A work station filled with industrial goodies.";
+	LOOTCRATE.lootTable = "industrial_basic";
+	LOOTCRATE.lootRespawnTime = 1200;
+	LOOTCRATE.lootSearchTime = 3;
+LOOTCRATE:Register();

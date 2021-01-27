@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Sewing Kit";
+	LOOTCRATE.uniqueID = "sewing_kit";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 3;
+	LOOTCRATE.model = "models/props_junk/cardboard_box004a.mdl";
+	LOOTCRATE.description = "A small sewing kit.";
+	LOOTCRATE.lootTable = "sewingkit";
+	LOOTCRATE.lootRespawnTime = 840;
+	LOOTCRATE.lootSearchTime = 3;
+LOOTCRATE:Register();

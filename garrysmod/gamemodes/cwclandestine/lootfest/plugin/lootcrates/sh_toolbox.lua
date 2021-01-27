@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Toolbox";
+	LOOTCRATE.uniqueID = "toolbox";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 4;
+	LOOTCRATE.model = "models/props_c17/briefcase001a.mdl";
+	LOOTCRATE.description = "A small toolbox.";
+	LOOTCRATE.lootTable = "toolbox";
+	LOOTCRATE.lootRespawnTime = 720;
+	LOOTCRATE.lootSearchTime = 5;
+LOOTCRATE:Register();

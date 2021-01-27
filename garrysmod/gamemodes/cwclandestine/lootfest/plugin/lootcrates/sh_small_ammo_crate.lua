@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Small Ammo Crate";
+	LOOTCRATE.uniqueID = "small_ammo_crate";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 4;
+	LOOTCRATE.model = "models/items/largeboxsrounds.mdl";
+	LOOTCRATE.description = "A small box filled with a variety of different ammunition.";
+	LOOTCRATE.lootTable = "ammo_box";
+	LOOTCRATE.lootRespawnTime = 1800;
+	LOOTCRATE.lootSearchTime = 2;
+LOOTCRATE:Register();

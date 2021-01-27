@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Chemical Shipment";
+	LOOTCRATE.uniqueID = "chemical";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 6;
+	LOOTCRATE.model = "models/props_junk/cardboard_box001a.mdl";
+	LOOTCRATE.description = "A large cardboard box that contains chemicals.";
+	LOOTCRATE.lootTable = "chemical";
+	LOOTCRATE.lootRespawnTime = 600;
+	LOOTCRATE.lootSearchTime = 3;
+LOOTCRATE:Register();

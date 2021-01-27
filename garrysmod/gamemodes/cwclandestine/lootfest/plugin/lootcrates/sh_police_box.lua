@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Police Box";
+	LOOTCRATE.uniqueID = "police_box";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 6;
+	LOOTCRATE.model = "models/props/CS_militia/footlocker01_closed.mdl";
+	LOOTCRATE.description = "A crate used by the police before the war.";
+	LOOTCRATE.lootTable = "old_military";
+	LOOTCRATE.lootRespawnTime = 1200;
+	LOOTCRATE.lootSearchTime = 8;
+LOOTCRATE:Register();

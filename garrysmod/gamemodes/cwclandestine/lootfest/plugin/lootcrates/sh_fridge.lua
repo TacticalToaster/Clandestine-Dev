@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Fridge";
+	LOOTCRATE.uniqueID = "fridge";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 6;
+	LOOTCRATE.model = "models/props_c17/FurnitureFridge001a.mdl";
+	LOOTCRATE.description = "An old, unpowered fridge.";
+	LOOTCRATE.lootTable = "kitchen";
+	LOOTCRATE.lootRespawnTime = 720;
+	LOOTCRATE.lootSearchTime = 5;
+LOOTCRATE:Register();

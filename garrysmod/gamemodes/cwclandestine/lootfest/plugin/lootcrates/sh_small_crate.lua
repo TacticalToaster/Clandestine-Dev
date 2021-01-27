@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Small Crate";
+	LOOTCRATE.uniqueID = "small_crate";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 4;
+	LOOTCRATE.model = "models/Items/item_item_crate.mdl";
+	LOOTCRATE.description = "A small crate with common retail items.";
+	LOOTCRATE.lootTable = "retail";
+	LOOTCRATE.lootRespawnTime = 600;
+	LOOTCRATE.lootSearchTime = 5;
+LOOTCRATE:Register();

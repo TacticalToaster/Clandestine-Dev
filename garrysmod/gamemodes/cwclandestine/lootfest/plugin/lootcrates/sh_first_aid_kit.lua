@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "First Aid Kit";
+	LOOTCRATE.uniqueID = "first_aid_kit";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 4;
+	LOOTCRATE.model = "models/props_c17/FurnitureFridge001a.mdl";
+	LOOTCRATE.description = "A small first aid kit.";
+	LOOTCRATE.lootTable = "light_medical";
+	LOOTCRATE.lootRespawnTime = 720;
+	LOOTCRATE.lootSearchTime = 4;
+LOOTCRATE:Register();

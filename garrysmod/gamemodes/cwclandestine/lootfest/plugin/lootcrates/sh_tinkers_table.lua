@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Tinker's Table";
+	LOOTCRATE.uniqueID = "tinker_table";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 6;
+	LOOTCRATE.model = "models/props_wasteland/controlroom_desk001b.mdl";
+	LOOTCRATE.description = "A small sewing kit.";
+	LOOTCRATE.lootTable = "tinkers";
+	LOOTCRATE.lootRespawnTime = 840;
+	LOOTCRATE.lootSearchTime = 10;
+LOOTCRATE:Register();

@@ -1,0 +1,9 @@
+"cwclandestine"
+{
+	"title"			"Clandestine"
+	"author"		"Altitude Team"
+	"description"	"A roleplaying schema about espionage during the most dangerous period in history for humanity."
+	"version"		"0.1.0"
+	"menusystem"	"0"
+	"workshopid"	"0"
+}

@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Industrial Closet";
+	LOOTCRATE.uniqueID = "industrial_closet";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 8;
+	LOOTCRATE.model = "models/props_wasteland/controlroom_storagecloset001a.mdl";
+	LOOTCRATE.description = "A large supply closet stocked with industrial goods.";
+	LOOTCRATE.lootTable = "industrial_advanced";
+	LOOTCRATE.lootRespawnTime = 2100;
+	LOOTCRATE.lootSearchTime = 10;
+LOOTCRATE:Register();

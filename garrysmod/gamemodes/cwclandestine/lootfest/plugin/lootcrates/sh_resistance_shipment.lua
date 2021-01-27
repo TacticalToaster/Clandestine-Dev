@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Resistance Shipment";
+	LOOTCRATE.uniqueID = "resistance_shipment";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 3;
+	LOOTCRATE.model = "models/items/item_beacon_crate.mdl";
+	LOOTCRATE.description = "A small crate with a make-shift device on it that seems to be out of power.";
+	LOOTCRATE.lootTable = "resistance";
+	LOOTCRATE.lootRespawnTime = 1800;
+	LOOTCRATE.lootSearchTime = 3;
+LOOTCRATE:Register();

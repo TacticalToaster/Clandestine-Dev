@@ -1,0 +1,15 @@
+local ITEM = Clockwork.item:New("gear_base");
+	ITEM.name = "Base";
+	ITEM.model = "models/props_c17/suitcase_passenger_physics.mdl";
+	ITEM.weight = 2;
+	ITEM.useText = "Wear";
+	ITEM.gearSlot = "chestTwoSlot";
+	ITEM.disabledSlots = {"chestOneSlot"};
+	ITEM.hitGroups = {HITGROUP_CHEST, HITGROUP_STOMACH};
+	ITEM.ballisticProtection = 20;
+	ITEM.explosiveProtection = 10;
+	ITEM.fallProtection = 0;
+	ITEM.durability = 60;
+	ITEM.category = "Gear";
+	ITEM.description = "A suitcase with a ballistics vest.";
+ITEM:Register();

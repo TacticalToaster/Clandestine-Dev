@@ -1,0 +1,11 @@
+local LOOTCRATE = Clockwork.lootcrate:New();
+	LOOTCRATE.name = "Cardboard Box";
+	LOOTCRATE.uniqueID = "cardboard_box";
+	LOOTCRATE.skin = 0;
+	LOOTCRATE.size = 4;
+	LOOTCRATE.model = "models/props_junk/cardboard_box003a.mdl";
+	LOOTCRATE.description = "A cardboard box filled with scrap.";
+	LOOTCRATE.lootTable = "scraps";
+	LOOTCRATE.lootRespawnTime = 600;
+	LOOTCRATE.lootSearchTime = 5;
+LOOTCRATE:Register();
