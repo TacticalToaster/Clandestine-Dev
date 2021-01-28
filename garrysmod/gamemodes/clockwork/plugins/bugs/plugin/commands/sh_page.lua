@@ -21,7 +21,7 @@ function COMMAND:OnRun(player, arguments)
 
 	if (Clockwork.kernel:GetSharedVar("pagersOn")) then
 		if (player:HasItemByID("pager")) then
-			if (target) then
+			if (target and target:HasItemByID("pager")) then
 				Clockwork.chatBox:Add({player, target}, player, "page", table.concat(arguments, " ", 2));
 			else
 				Clockwork.player:Notify(player, {"NotValidPlayer", arguments[1]});
