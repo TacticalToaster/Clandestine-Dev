@@ -18,8 +18,8 @@ function COMMAND:OnRun(player, arguments)
 
 		Clockwork.chatBox:Add(player, nil, "treat", "You notice the following things about the patient:");
 
-		Clockwork.chatBox:Add(player, nil, "treat", "The patient's blood level is: "..target:GetCharacterData("blood").."/100.");
-		Clockwork.chatBox:Add(player, nil, "treat", "The patient's respiration is: "..target:GetCharacterData("respiration").."/100.");
+		Clockwork.chatBox:Add(player, nil, "treat", "The patient's blood level is: "..math.Round(target:GetCharacterData("blood")).."/100.");
+		Clockwork.chatBox:Add(player, nil, "treat", "The patient's respiration is: "..math.Round(target:GetCharacterData("respiration")).."/100.");
 
 		for i,v in pairs(injuries) do
 			//local injuryTable = Clockwork.injury:FindByID(v.type);
@@ -43,8 +43,8 @@ function COMMAND:OnRun(player, arguments)
 
 		Clockwork.chatBox:Add(player, nil, "treat", "You notice the following things about yourself:");
 
-		Clockwork.chatBox:Add(player, nil, "treat", "Your blood level is: "..player:GetCharacterData("blood").."/100.");
-		Clockwork.chatBox:Add(player, nil, "treat", "Your respiration is: "..player:GetCharacterData("respiration").."/100.");
+		Clockwork.chatBox:Add(player, nil, "treat", "Your blood level is: "..math.Round(player:GetCharacterData("blood")).."/100.");
+		Clockwork.chatBox:Add(player, nil, "treat", "Your respiration is: "..math.Round(player:GetCharacterData("respiration")).."/100.");
 
 		for i,v in pairs(injuries) do
 			//local injuryTable = Clockwork.injury:FindByID(v.type);
