@@ -2743,6 +2743,17 @@ function Clockwork:PostDrawViewModel(viewModel, player, weapon)
    	end;
 end;
 
+-- Called when clockwork has been reloaded by auto refresh.
+function Clockwork:OnClockworkReloaded()
+	cwTheme:CreateFonts();
+		cwTheme:CopySkin();
+	cwTheme:Initialize();
+
+	Clockwork.kernel:PrintColoredText(
+		Clockwork.kernel:GetLogTypeColor(LOGTYPE_MINOR), "Clockwork has auto-reloaded clientside!"
+	);
+end;
+
 --[[
     @codebase Client
     @details This function is called when local player info text is needed and adds onto it (F1 menu).
