@@ -1,5 +1,5 @@
 --[[
-	© 2013 CloudSixteen.com do not share, re-distribute or modify
+	Â© 2013 CloudSixteen.com do not share, re-distribute or modify
 	without permission of its author (kurozael@gmail.com).
 --]]
 
@@ -30,7 +30,7 @@ function ITEM:OnUse(player, itemEntity)
 		local pain = target:GetCharacterData("pain");
 
 		if (target:HasInjury("tension pneumothorax")) then
-			target:TreatInjuries("tension pneumothorax");
+			target:TreatInjuries("tension pneumothorax", player);
 			target:SetCharacterData("pain", pain + 30);
 			target:SetCharacterData("respiration", respiration + 50);
 			Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully performed a finger thoracostomy!");
