@@ -11,11 +11,11 @@ function THEME:CreateFonts()
 		size = Clockwork.kernel:FontScreenScale(7),
 		weight = 600, 
 		antialias = true,
-		font = "Courier New"
+		font = "Book Antiqua"
 	});
 	Clockwork.fonts:Add("clandestine_MainText", 
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(7),
 		weight		= 400
 	});
@@ -27,91 +27,91 @@ function THEME:CreateFonts()
 	});
 	Clockwork.fonts:Add("clandestine_Tooltip", 
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(5),
 		weight		= 50
 	});
 	Clockwork.fonts:Add("clandestine_MenuTextBig",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(18),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_MenuTextTiny",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(7),
 		weight		= 100
 	});
 	Clockwork.fonts:Add("clandestine_InfoTextFont",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(6),
 		weight		= 100
 	});
 	Clockwork.fonts:Add("clandestine_MenuTextHuge",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(30),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_MenuTextSmall",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(10),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_IntroTextBig",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(18),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_IntroTextTiny",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(9),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_IntroTextSmall",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(7),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_Large3D2D",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:GetFontSize3D(),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_ScoreboardName",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= 20,
 		weight		= 100
 	});
 	Clockwork.fonts:Add("clandestine_ScoreboardDesc",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= 16,
 		weight		= 50
 	});
 	Clockwork.fonts:Add("clandestine_ScoreboardClass",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= 25,
 		weight		= 100
 	});
 	Clockwork.fonts:Add("clandestine_CinematicText",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(8),
 		weight		= 300
 	});
 	Clockwork.fonts:Add("clandestine_ChatSyntax",
 	{
-		font		= "Courier New",
+		font		= "Book Antiqua",
 		size		= Clockwork.kernel:FontScreenScale(7),
 		weight		= 600
 	});
@@ -147,16 +147,48 @@ function THEME:Initialize()
 	Clockwork.option:SetFont("chat_box_syntax", "clandestine_ChatSyntax");
 	Clockwork.option:SetFont("chat_box_text", "clandestine_MainText");
 	
-	Clockwork.option:SetColor("information", Color(62, 70, 102, 255));
-	Clockwork.option:SetColor("background", Color(0, 0, 0, 255));
-	Clockwork.option:SetColor("target_id", Color(62, 70, 102, 255));
+	Clockwork.option:SetColor("columnsheet_shadow_normal", Color(0, 0, 0, 0));
+	Clockwork.option:SetColor("columnsheet_text_normal", Color(255, 255, 255, 255));
+	Clockwork.option:SetColor("columnsheet_shadow_active", Color(0, 0, 0, 0));
+	Clockwork.option:SetColor("columnsheet_text_active", Color(237, 237, 237, 255));
+	
+	Clockwork.option:SetColor("basic_form_highlight", Color(255, 255, 255, 255));
+	Clockwork.option:SetColor("basic_form_color_help", Color(255, 255, 255, 255));
+	Clockwork.option:SetColor("basic_form_color", Color(255, 255, 255, 255));
+
+	Clockwork.option:SetColor("scoreboard_name", Color(255, 255, 255, 255));
+	Clockwork.option:SetColor("scoreboard_desc", Color(255, 255, 255, 255));
+	Clockwork.option:SetColor("scoreboard_item_background", Color(255, 255, 255, 255));
+
+	Clockwork.option:SetColor("information", Color(255, 255, 255, 255));
+	Clockwork.option:SetColor("background", Color(62, 70, 102, 255));
+	Clockwork.option:SetColor("target_id", Color(0, 251, 0, 255));
+	Clockwork.option:SetColor("white", Color(255, 255, 255, 255));
 	//Clockwork.option:SetFont("bar_text", "DefaultFont");
 	//Clockwork.option:SetFont("main_text", "DefaultFont");
 	//Clockwork.option:SetFont("hints_text", "DefaultFont");
 
 	Clockwork.option:SetKey("gradient", "clandestine/blue_grad");
-	Clockwork.option:SetKey("schema_logo", "clandestine/zeta");
+	Clockwork.option:SetKey("schema_logo", "clandestine/clandestine");
 	Clockwork.option:SetKey("intro_image", "clandestine/intro")
+
+	SMALL_BAR_BG = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	SMALL_BAR_FG = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	INFOTEXT_SLICED = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	MENU_ITEM_SLICED = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	SLICED_SMALL_TINT = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	SLICED_INFO_MENU_INSIDE = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	PANEL_LIST_SLICED = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	DERMA_SLICED_BG = Clockwork.render:AddSlice9("BigBox", "clandestine/theme/transparent", 28);
+	SLICED_LARGE_DEFAULT = Clockwork.render:AddSlice9("BigBox", "clandestine/theme/transparent", 28);
+	SLICED_PROGRESS_BAR = Clockwork.render:AddSlice9("BigBox", "clandestine/theme/transparent", 28);
+	SLICED_PLAYER_INFO = Clockwork.render:AddSlice9("BigBox", "clandestine/theme/transparent", 28);
+	SLICED_INFO_MENU_BG = Clockwork.render:AddSlice9("BigBox", "clandestine/theme/transparent", 28);
+	CUSTOM_BUSINESS_ITEM_BG = Clockwork.render:AddSlice9("BigBox", "clandestine/theme/transparent", 28);
+	SLICED_COLUMNSHEET_BUTTON = Clockwork.render:AddSlice9("SmallBox", "clandestine/theme/small_dark", 6);
+	
+	Clockwork.bars.height = 12;
+	Clockwork.bars.padding = 14;
 
 	Clockwork.option:SetSound("click_release", "ambient/levels/prison/radio_random12.wav");
 	Clockwork.option:SetSound("rollover", "ambient/levels/prison/radio_random2.wav");
