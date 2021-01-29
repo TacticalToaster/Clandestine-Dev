@@ -1,5 +1,5 @@
 --[[
-	© 2013 CloudSixteen.com do not share, re-distribute or modify
+	Â© 2013 CloudSixteen.com do not share, re-distribute or modify
 	without permission of its author (kurozael@gmail.com).
 --]]
 
@@ -28,7 +28,7 @@ function ITEM:OnUse(player, itemEntity)
 
 	if (target and entity:GetPos():Distance( player:GetShootPos() ) <= 192) then
 		if (target:HasInjury("burn wound")) then
-			target:TreatInjuries("burn wound");
+			target:TreatInjuries("burn wound", player);
 			Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully alleviated the pain!");
 		else
 			Clockwork.player:Notify(player, "The patient doesn't seem to be burned!");
