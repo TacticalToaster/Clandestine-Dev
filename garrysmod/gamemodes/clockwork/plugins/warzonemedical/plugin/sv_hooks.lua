@@ -212,7 +212,7 @@ function PLUGIN:PlayerThink(player, curTime, infoTable)
 
 		local bPlayerBreathSnd = false;
 
-		if (respiration <= 80 and respiration > 50 and Clockwork.event:CanRun("sounds", "breathing") and (self:GetCharacterData("Stamina") and self:GetCharacterData("Stamina") >= 30)) then
+		if (respiration <= 80 and respiration > 50 and Clockwork.event:CanRun("sounds", "breathing") or (player:GetCharacterData("Stamina") and player:GetCharacterData("Stamina") >= 30)) then
 			bPlayerBreathSnd = true;
 		end;
 		
