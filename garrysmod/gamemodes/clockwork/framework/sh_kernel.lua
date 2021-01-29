@@ -970,6 +970,13 @@ function Clockwork:DoAnimationEvent(player, event, data)
 	return nil;
 end;
 
+-- Called when gamemode has been reloaded by auto refresh.
+function Clockwork:OnReloaded()
+	timer.Simple(0.5, function()
+		hook.Call("OnClockworkReloaded", nil);
+	end);
+end;
+
 if (SERVER) then
 	local ServerLog = ServerLog;
 	local cvars = cvars;
