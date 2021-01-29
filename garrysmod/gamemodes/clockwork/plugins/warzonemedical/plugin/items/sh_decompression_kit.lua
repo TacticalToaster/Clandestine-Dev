@@ -1,5 +1,5 @@
 --[[
-	© 2013 CloudSixteen.com do not share, re-distribute or modify
+	Â© 2013 CloudSixteen.com do not share, re-distribute or modify
 	without permission of its author (kurozael@gmail.com).
 --]]
 
@@ -36,7 +36,7 @@ function ITEM:OnUse(player, itemEntity)
 
 			Clockwork.player:EntityConditionTimer(player, target, entity, applyTime, 192, function() if (player:Alive() and (target:HasInjury("tension pneumothorax"))) then return true end end, function(success)
 				if (success) then
-					target:TreatInjuries("tension pneumothorax");
+					target:TreatInjuries("tension pneumothorax", player);
 					target:SetCharacterData("respiration", respiration + 50);
 					Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully used the decompression kit!");
 					Clockwork.chatBox:Add(target, nil, "treat", "* The medic forces a needle into your chest, and immediately you have an easier time breathing.");
