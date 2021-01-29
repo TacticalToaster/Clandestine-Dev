@@ -5351,6 +5351,15 @@ function Clockwork:SetupPlayerVisibility(player)
 	end;
 end;
 
+-- Called when clockwork has been reloaded by auto refresh.
+function Clockwork:OnClockworkReloaded()
+	cwDatabase:OnConnected();
+
+	cwKernel:PrintLog(
+		LOGTYPE_MAJOR, "Clockwork has auto-reloaded serverside!"
+	);
+end;
+
 --[[
 	@codebase Server
 	@details Called after a player has spawned an NPC.
