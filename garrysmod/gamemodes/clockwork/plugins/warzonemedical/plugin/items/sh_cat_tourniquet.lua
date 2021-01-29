@@ -1,5 +1,5 @@
 --[[
-	© 2013 CloudSixteen.com do not share, re-distribute or modify
+	Â© 2013 CloudSixteen.com do not share, re-distribute or modify
 	without permission of its author (kurozael@gmail.com).
 --]]
 
@@ -37,17 +37,17 @@ function ITEM:OnUse(player, itemEntity)
 			Clockwork.player:EntityConditionTimer(player, target, entity, applyTime, 192, function() if (player:Alive() and (target:HasInjury("gunshot wound") or target:HasInjury("laceration") or target:HasInjury("severe bleed"))) then return true end end, function(success)
 				if (success) then
 					if (target:HasInjury("severe bleed")) then
-						target:TreatInjury("severe bleed");
+						target:TreatInjury("severe bleed", player);
 						target:GiveInjury("tourniquet with severe bleed");
 						target:SetHealth( math.Clamp( target:Health() + 10, 0, target:GetMaxHealth() ) );
 						Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully stopped some severe bleeding in the patient, but there's still some bleeding!");
 					elseif (target:HasInjury("gunshot wound")) then
-						target:TreatInjury("gunshot wound");
+						target:TreatInjury("gunshot wound", player);
 						target:GiveInjury("tourniquet with gunshot wound");
 						target:SetHealth( math.Clamp( target:Health() + 5, 0, target:GetMaxHealth() ) );
 						Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully stopped bleeding from a gunshot wound in the patient!");
 					elseif (target:HasInjury("laceration")) then
-						target:TreatInjury("laceration");
+						target:TreatInjury("laceration", player);
 						target:GiveInjury("tourniquet with laceration");
 						target:SetHealth( math.Clamp( target:Health() + 5, 0, target:GetMaxHealth() ) );
 						Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully stopped bleeding from a laceration in the patient!");
@@ -82,17 +82,17 @@ function ITEM:OnUse(player, itemEntity)
 			Clockwork.player:ConditionTimer(player, applyTime, function() if (player:Alive() and (player:HasInjury("gunshot wound") or player:HasInjury("laceration") or player:HasInjury("severe bleed"))) then return true end end, function(success)
 				if (success) then
 					if (player:HasInjury("severe bleed")) then
-						player:TreatInjury("severe bleed");
+						player:TreatInjury("severe bleed", player);
 						player:GiveInjury("tourniquet with severe bleed");
 						player:SetHealth( math.Clamp( player:Health() + 10, 0, player:GetMaxHealth() ) );
 						Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully stopped your severe bleeding, but there's still some smaller bleeding!");
 					elseif (player:HasInjury("gunshot wound")) then
-						player:TreatInjury("gunshot wound");
+						player:TreatInjury("gunshot wound", player);
 						target:GiveInjury("tourniquet with gunshot wound");
 						player:SetHealth( math.Clamp( player:Health() + 5, 0, player:GetMaxHealth() ) );
 						Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully stopped your bleeding from a gunshot wound!");
 					elseif (player:HasInjury("laceration")) then
-						player:TreatInjury("laceration");
+						player:TreatInjury("laceration", player);
 						player:GiveInjury("tourniquet with small bleed");
 						player:SetHealth( math.Clamp( player:Health() + 5, 0, player:GetMaxHealth() ) );
 						Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully stopped your bleeding from a laceration!");
