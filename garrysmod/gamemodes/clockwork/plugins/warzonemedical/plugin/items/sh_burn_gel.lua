@@ -1,5 +1,5 @@
 --[[
-	© 2013 CloudSixteen.com do not share, re-distribute or modify
+	Â© 2013 CloudSixteen.com do not share, re-distribute or modify
 	without permission of its author (kurozael@gmail.com).
 --]]
 
@@ -29,7 +29,7 @@ function ITEM:OnUse(player, itemEntity)
 
 			Clockwork.player:EntityConditionTimer(player, target, entity, applyTime, 192, function() if (player:Alive() and (target:HasInjury("burn wound"))) then return true end end, function(success)
 				if (success) then
-					target:TreatInjury("burn wound");
+					target:TreatInjury("burn wound", player);
 					Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully alleviated the patient's pain!");
 					player:TakeItem(self);
 				end;
@@ -57,7 +57,7 @@ function ITEM:OnUse(player, itemEntity)
 
 			Clockwork.player:ConditionTimer(player, applyTime, function() if (player:Alive() and (player:HasInjury("burn wound"))) then return true end end, function(success)
 				if (success) then
-					player:TreatInjury("burn wound");
+					player:TreatInjury("burn wound", player);
 					Clockwork.chatBox:Add(player, nil, "treat", "* You have successfully alleviated your pain!");
 					player:TakeItem(self);
 				end;
