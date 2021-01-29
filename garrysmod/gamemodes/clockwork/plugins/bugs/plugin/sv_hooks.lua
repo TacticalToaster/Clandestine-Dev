@@ -33,7 +33,7 @@ function PLUGIN:ChatBoxMessageAdded(info)
 				local transmitter = v:IsTransmitting();
 				
 				if (frequency != 0 and transmitter) then
-					info.shouldSend = false;		//this would keep the players being bugged from talking normally, only transmitting rather then continuing as normal
+					//info.shouldSend = false;		//this would keep the players being bugged from talking normally, only transmitting rather then continuing as normal
 					//info.listeners = {};
 					data.frequency = frequency;
 					data.position = v:GetPos();
